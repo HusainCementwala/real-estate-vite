@@ -70,6 +70,42 @@ export const projectsData = [
       location: "Chicago",
       image: project_img_6
     },
+    {
+      title: "Vista Verde",
+      price: "$2,50,000",
+      location: "San Francisco",
+      image: project_img_2
+    },
+    {
+      title: "Serenity Suites",
+      price: "$2,50,000",
+      location: "Chicago",
+      image: project_img_3
+    },
+    {
+      title: "Central Square",
+      price: "$2,50,000",
+      location: "Los Angeles",
+      image: project_img_4
+    },
+    {
+      title: "Vista Verde",
+      price: "$2,50,000",
+      location: "San Francisco",
+      image: project_img_2
+    },
+    {
+      title: "Serenity Suites",
+      price: "$2,50,000",
+      location: "Chicago",
+      image: project_img_3
+    },
+    {
+      title: "Central Square",
+      price: "$2,50,000",
+      location: "Los Angeles",
+      image: project_img_4
+    },
     
   ];
 
