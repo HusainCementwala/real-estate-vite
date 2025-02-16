@@ -39,7 +39,7 @@ useEffect(()=>{
           hover:text-gray-400'>Testimonials</a>
         </ul>
 
-        <button className='hidden md:block bg-white px-8 py-2 rounded-full cursor-pointer'>Sign Up</button>
+        <button className='hidden md:block bg-white px-8 py-2 rounded-full cursor-pointer'><a href="#Footer">Sign Up</a></button>
 
         <img onClick={()=>setShowMobileMenu(true)} src={assets.menu_icon} className='md:hidden w-7 cursor-pointer' alt="" />
       </div>
