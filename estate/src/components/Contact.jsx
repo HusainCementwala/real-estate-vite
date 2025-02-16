@@ -1,5 +1,6 @@
 import React from 'react'
 import { toast } from 'react-toastify';
+import {motion} from 'framer-motion'
 
 const Contact = () => {
 
@@ -32,30 +33,65 @@ const Contact = () => {
 
 
   return (
-    <div className='text-center p-6 py-30 lg:px-32 w-full overflow-hidden' id='Contact'>
+    <div 
+    
+    className='text-center p-6 py-30 lg:px-32 w-full overflow-hidden' id='Contact'>
 
-<h1 className='text-3xl sm:text-4xl font-bold mb-2 text-center'>Reach Out To <span className='underline underline-offset-4 decoration-1 under font-light'>US</span></h1>
+<motion.h1 
+initial={{ opacity: 0, y: -50 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 1, delay: 0.4 }}
+viewport={{ once: false, amount: 0.3 }}
+
+
+className='text-3xl sm:text-4xl font-bold mb-2 text-center'>Reach Out To <span className='underline underline-offset-4 decoration-1 under font-light'>US</span></motion.h1>
 <p className='text-center text-gray-500 mb-12 max-w-80 mx-auto'>Let's turn your real estate dreams into reality!</p>
 
 <form onSubmit={onSubmit} className='max-w-2xl mx-auto text-gray-600 pt-8'>
   <div className='flex flex-wrap'>
     <div className='w-full md:w-1/2 text-left'>
       Your Name
-      <input className='w-full border border-gray-500 rounded py-3 px-4 mt-2' type="text" name='Name' placeholder='Your Name...' required/>
+      <motion.input 
+       initial={{ opacity: 0, x: -50 }}
+       whileInView={{ opacity: 1, x: 0 }}
+       transition={{ duration: 0.6, delay: 0.4 }}
+       viewport={{ once: false, amount: 0.3 }}
+      
+      className='w-full border-2 border-gray-500 rounded py-3 px-4 mt-2' type="text" name='Name' placeholder='Your Name...' required/>
     </div>
     <div className='w-full md:w-1/2 text-left md:pl-4'>
       Your Email
-      <input className='w-full border border-gray-500 rounded py-3 px-4 mt-2' type="email" name='Email' placeholder='Your email...' required/>
+      <motion.input 
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      viewport={{ once: false, amount: 0.3 }}
+      
+      
+      className='w-full border-2 border-gray-500 rounded py-3 px-4 mt-2' type="email" name='Email' placeholder='Your email...' required/>
     </div>
   </div>
 
   <div className='my-10 text-center'>
     Message 
-    <textarea className='w-full border border-gray-500 rounded py-3 px-4 mt-2 h-48 resize-none'
-     name="message" placeholder="Let's have a call on..." required ></textarea>
+    <motion.textarea 
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.6 }}
+    viewport={{ once: false, amount: 0.3 }}
+    
+    
+    className='w-full border-2 border-gray-500 rounded py-3 px-4 mt-2 h-48 resize-none'
+     name="message" placeholder="Let's have a call on..." required ></motion.textarea>
   </div>
 
-  <button className='bg-blue-600 text-white py-2 px-12 mb-10 rounded cursor-pointer'>{result ? result : "Send Message"}</button>
+  <motion.button 
+   initial={{ opacity: 0, y: 30 }}
+   whileInView={{ opacity: 1, y: 0 }}
+   transition={{ duration: 0.6, delay: 0.8 }}
+   viewport={{ once: false, amount: 0.3 }}
+  
+  className='bg-blue-600 text-white py-2 px-12 mb-10 rounded cursor-pointer'>{result ? result : "Send Message"}</motion.button>
 </form>
 
 
